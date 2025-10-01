@@ -1,0 +1,100 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at center, #1b1f36, #06070f 70%);
+  color: #f4f7ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(640px, 900px);
+  gap: 1.5rem;
+  padding: 2rem;
+  width: min(1200px, 95vw);
+}
+
+.panel {
+  background: rgba(12, 15, 30, 0.82);
+  border: 1px solid rgba(87, 103, 203, 0.6);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 45px rgba(5, 8, 25, 0.45);
+}
+
+.panel h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.02em;
+}
+
+.panel p {
+  line-height: 1.5;
+}
+
+.objectives {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.stats {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 1.05rem;
+}
+
+button {
+  margin-top: 1.4rem;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, #5a7cfa, #9277ff);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+button.hidden {
+  display: none;
+}
+
+#game {
+  width: 100%;
+  border-radius: 18px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.07), rgba(0, 0, 0, 0.85));
+  border: 1px solid rgba(113, 138, 255, 0.4);
+  box-shadow: inset 0 0 80px rgba(72, 96, 255, 0.15), 0 25px 45px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .panel {
+    order: 2;
+    width: min(480px, 90vw);
+  }
+
+  #game {
+    order: 1;
+    max-width: 95vw;
+  }
+}

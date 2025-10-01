@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelea de Arañas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="panel">
+      <h1>Telaraña en Batalla</h1>
+      <p>
+        Controla a la araña guardiana y come la mosca antes de que las intrusas
+        se roben tu comida. Muévete con <strong>WASD</strong> o las flechas y
+        dispara seda pegajosa con <strong>Espacio</strong> (o clic) en la
+        dirección del puntero.
+      </p>
+      <ul class="objectives">
+        <li>Come moscas para sumar puntos.</li>
+        <li>Evita que las arañas intrusas alcancen a la mosca.</li>
+        <li>Si una intrusa te golpea, pierdes resistencia.</li>
+      </ul>
+      <div class="stats">
+        <div>Puntuación: <span id="score">0</span></div>
+        <div>Moscas robadas: <span id="stolen">0</span></div>
+        <div>Resistencia: <span id="health">100</span>%</div>
+      </div>
+      <button id="restart" class="hidden">Reiniciar</button>
+    </section>
+    <canvas id="game" width="900" height="600" aria-label="Juego de una araña comiendo una mosca"></canvas>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
